@@ -5,23 +5,6 @@ from youtube_transcript_api import YouTubeTranscriptApi
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackContext
 
-# 🔹 API Keys (Replace with actual keys)
-COHERE_API_KEY = "YOUR_COHERE_API_KEY"
-TELEGRAM_BOT_TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
-GOOGLE_API_KEY = "YOUR_GOOGLE_API_KEY"
-CSE_ID = "YOUR_CSE_ID"
-PUBMED_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
-
-COHERE_API_KEY = "fnrnqLCIFLlD3cni3EvAaR1JXTayU28xJ0jlGqpY"
-
-TELEGRAM_BOT_TOKEN = "8136633488:AAHGdqTBQgMuXZuOhIiCuIlxA3LML6R1upA"
-
-# Google Search API Key & Custom Search Engine ID (Replace with yours)
-GOOGLE_API_KEY = "AIzaSyBtzmH64cdd2qfwHYCiEktS6NV9dqNv4VI"
-CSE_ID = "077476a678641496a"
-# 🔹 Initialize Cohere Client
-co = cohere.Client(COHERE_API_KEY)
-
 # 🔹 Extract Video ID from YouTube URL
 def extract_video_id(youtube_url):
     match = re.search(r"(?:v=|\/)([0-9A-Za-z_-]{11})", youtube_url)
